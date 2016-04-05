@@ -3,7 +3,11 @@
 	<head>
 		<title>³Æ§Ñ¿ý</title>
 		<script type="text/javascript" src="jquery.js"></script>
-		
+		<style>
+		.delline{
+			text-decoration:line-through;
+		}
+		</style>
 		
 	</head>
 	<body>
@@ -27,7 +31,11 @@
 			$("#"+id).remove();
 		}
 		function delline(id){
-			$("#"+id).css('text-decoration','line-through');
+			if($("#ck"+id).prop("checked")){
+				$("#"+id).addClass("delline");
+			}else{
+				$("#"+id).removeClass("delline");
+			}	
 			
 		}
 	</script>
